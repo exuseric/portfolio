@@ -1,0 +1,65 @@
+@import './breakpoints';
+
+@mixin screen-md {
+  @media screen and (min-width: #{$screen-md}) {
+    .container,
+    .nav-container {
+      width: 43rem; // 688px
+      margin: auto;
+    }
+    @content
+  }
+};
+
+@mixin screen-lg {
+  @media screen and (min-width: #{$screen-lg}) {
+    .container,
+    .nav-container {
+      width: 59rem; // 944px
+      margin: auto;
+    }
+    @content
+  }
+};
+
+@mixin screen-xl {
+  @media screen and (min-width: #{$screen-xl}) {
+    .container,
+    .nav-container {
+      width: 70rem; // 1280px
+      margin: auto;
+    }
+    @content
+  }
+};
+
+@mixin screen-xxl {
+  @media screen and (min-width: #{$screen-xxl}) {
+    .container,
+    .nav-container {
+      width: 87.5rem; // 1400px
+      margin: auto;
+    }
+    @content
+  }
+};
+
+@mixin grid-cols-2($column) {
+  display: grid;
+  grid-template-columns: repeat(2, $column);
+  align-items: center;
+};
+
+@mixin grid-rows-2($row) {
+  display: grid;
+  grid-template-rows: repeat(2, $row);
+  align-items: center;
+};
+
+@mixin flex-justify($flow, $justify) {
+  display: flex;
+  flex-flow: $flow wrap;
+  justify-content: $justify;
+  align-items: center;
+  gap: 0.85rem;
+};

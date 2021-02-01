@@ -1,0 +1,32 @@
+@import './resets';
+@import './mixins';
+@import './animations';
+
+// COLORS
+$primary: #ffdc00;
+$secondary: #00a3ff;
+$highlight: #44bcff;
+$white: #ffffff;
+$gray: #777777;
+$dark-gray: #161616;
+$black: #020202;
+$gradient-default: linear-gradient(to right, #00a3ff, #5c00ff);
+
+// Types
+$paragraph: 'Cabin', sans-serif;
+$heading: 'Rock Salt', fantasy;
+
+// Type Scale
+$font-base: 16px;
+$font-xs: 0.8125rem; // 13px
+$font-sm: 1rem; // 16px
+$font-md: 1.5rem; // 24px
+$font-lg: 3.75rem; // 60px
+$font-xl: 4.6rem; // 75px
+$font-2xl: 7.5rem; // 120px
+
+// Spacing Scale
+$space-xs: 0.625rem; // 10px
+$space-sm: 0.9375rem; // 15px
+$space-md: 1.875rem; // 30px
+$space-lg: 5rem; // 80px
