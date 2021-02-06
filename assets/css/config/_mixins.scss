@@ -2,8 +2,8 @@
 
 @mixin screen-md {
   @media screen and (min-width: #{$screen-md}) {
-    .container,
-    .nav-container {
+    .wrapper,
+    .nav-wrapper {
       width: 43rem; // 688px
       margin: auto;
     }
@@ -13,32 +13,9 @@
 
 @mixin screen-lg {
   @media screen and (min-width: #{$screen-lg}) {
-    .container,
+    .wrapper,
     .nav-container {
-      width: 59rem; // 944px
-      margin: auto;
-    }
-    @content
-  }
-};
 
-@mixin screen-xl {
-  @media screen and (min-width: #{$screen-xl}) {
-    .container,
-    .nav-container {
-      width: 70rem; // 1280px
-      margin: auto;
-    }
-    @content
-  }
-};
-
-@mixin screen-xxl {
-  @media screen and (min-width: #{$screen-xxl}) {
-    .container,
-    .nav-container {
-      width: 87.5rem; // 1400px
-      margin: auto;
     }
     @content
   }
@@ -56,10 +33,16 @@
   align-items: center;
 };
 
-@mixin flex-justify($flow, $justify) {
+@mixin flex($flow, $justify) {
   display: flex;
   flex-flow: $flow wrap;
   justify-content: $justify;
   align-items: center;
   gap: 0.85rem;
 };
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

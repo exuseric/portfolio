@@ -39,95 +39,57 @@
           type="message"
           name="message"
           placeholder="Hello, How are you?"
-          class="form-control text-area"
+          class="form-control textarea"
           required
         ></textarea>
       </div>
     </div>
-    <button type="submit" class="form-submit">Send Message</button>
+    <button type="submit" class="form-submit gradient-btn">Send Message</button>
   </form>
 </template>
-
-<script>
-export default {}
-</script>
 
 <style lang="scss" scoped>
 .form {
   width: 100%;
+  min-width: 20rem;
 
-  .header {
-    text-align: left;
-  }
-
-  .form-group {
-    @include grid-rows-2(auto);
-    row-gap: $space-xs;
-    margin: $space-sm 0;
-
-    color: $secondary;
-
-    label {
-      width: fit-content;
-
-      text-transform: capitalize;
-
-      color: $gray;
-    }
-    textarea {
-      height: 15rem;
-    }
-  }
-
-  .form-control {
-    padding: $space-sm;
-
-    color: $white;
-    background-color: $dark-gray;
-
-    border: 1px solid transparent;
-  }
-
-  .form-submit {
-    font-size: $font-md;
-    font-weight: 700;
-
-    padding: $space-sm;
+  @include screen-lg {
+    width: 40rem;
     margin: auto;
-    width: 100%;
+  }
+}
+.form-group {
+  @include flex(column, space-between);
+  margin-bottom: $space-md;
 
-    color: $white;
-    background-image: $gradient-default;
-    background-size: 300% 100%;
-
-    border: 1px solid transparent;
-    transition: all 0.4s ease-in-out;
-
-    &:hover {
-      background-position: 100% 0;
-      transition: all 0.4s ease-in-out;
-    }
+  label {
+    color: theme('text-mid');
+    align-self: flex-start;
+    text-transform: capitalize;
   }
 }
 
-.form-fields {
-  @include grid-cols-2(auto);
-  @include grid-rows-2(auto);
-  column-gap: $space-sm;
+.form-control {
+  width: 100%;
+  padding: $space-sm;
 
-  .form-group:nth-child(1),
-  .form-group:nth-child(1) {
-    grid-row: 1 / 2;
-  }
-  .form-group:nth-child(1) {
-    grid-column: 1 / 2;
-  }
-  .form-group:nth-child(2) {
-    grid-column: 2 / -1;
-  }
-  .form-group:nth-child(3) {
-    grid-column: 1 / -1;
-    grid-row: 2 / -1;
-  }
+  color: theme('text-light');
+  background-color: theme('dark-bg');
+
+  border: 1px solid transparent;
+  border-radius: 0.15rem;
+}
+
+.textarea {
+  height: 100%;
+  min-height: 10rem; //160px
+}
+
+.form-submit {
+  font-size: $font-md;
+
+  width: 100%;
+
+  padding: $space-md;
 }
 </style>

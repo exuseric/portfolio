@@ -1,20 +1,21 @@
 @import './resets';
 @import './mixins';
 @import './animations';
+@import './functions';
 
 // COLORS
 $primary: #ffdc00;
 $secondary: #00a3ff;
 $highlight: #44bcff;
 $white: #ffffff;
-$gray: #777777;
+$gray: #505050;
 $dark-gray: #161616;
 $black: #020202;
-$gradient-default: linear-gradient(to right, #00a3ff, #5c00ff);
+$gradient: linear-gradient(135deg, #00a3ff, #5c00ff);
 
 // Types
 $paragraph: 'Cabin', sans-serif;
-$heading: 'Rock Salt', fantasy;
+$heading: 'Playfair Display', serif;
 
 // Type Scale
 $font-base: 16px;
@@ -28,5 +29,23 @@ $font-2xl: 7.5rem; // 120px
 // Spacing Scale
 $space-xs: 0.625rem; // 10px
 $space-sm: 0.9375rem; // 15px
-$space-md: 1.875rem; // 30px
+$space-md: 1.25rem; // 20px
 $space-lg: 5rem; // 80px
+
+// Scale
+$nav-scale-sm: 5rem; // 80px
+$nav-scale-lg: 7.5rem; // 120px
+
+$theme: (
+  'main-bg': $black,
+  'main-text': $white,
+  'light-bg': $white,
+  'dark-bg': $dark-gray,
+  'pop-bg': $primary,
+  'text-primary': $primary,
+  'text-secondary': $secondary,
+  'text-dark': $dark-gray,
+  'text-light': $white,
+  'text-mid': $gray,
+
+);

@@ -7,19 +7,20 @@ body, html {
 }
 
 .main {
-  color: $white;
-  background-color: $black;
+  color: theme('main-text');
+  background-color: theme('main-bg');
 
   width: 100%;
   height: 100%;
   min-height: 100vh;
 }
 
-.container {
-  @include screen-md;
-  @include screen-lg;
-  @include screen-xl;
-  @include screen-xxl;
+.wrapper {
+  width: 100%;
+  max-width: 100rem;
+
+  margin: auto;
+  padding: $space-lg 0;
 }
 
 .heading {
@@ -29,6 +30,9 @@ body, html {
 
 .text-xs {
   font-size: $font-xs;
+}
+.text-sm {
+  font-size: $font-sm;
 }
 .text-md {
   font-size: $font-md;
@@ -49,8 +53,15 @@ body, html {
   padding: 2rem;
 }
 
+.primary {
+  color: theme('text-primary');
+}
+
 .link {
-  color: $white;
+  text-decoration: none;
+  text-transform: capitalize;
+
+  color: theme('main-text');
 
   margin: auto;
 
@@ -66,4 +77,18 @@ button {
   cursor: pointer;
   border: 1px solid transparent;
   transition: background-color 0.35s ease-out;
+}
+
+.gradient-btn {
+  color: theme('text-light');
+  background: $gradient;
+  background-size: 100%;
+  background-repeat: repeat;
+
+  border: 2px solid transparent;
+  outline: none;
+
+  &:hover {
+    border-color: currentColor;
+  }
 }

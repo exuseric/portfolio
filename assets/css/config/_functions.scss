@@ -1,0 +1,3 @@
+@function theme($name) {
+  @return map-get($theme, $name)
+}

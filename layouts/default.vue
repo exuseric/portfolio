@@ -1,7 +1,9 @@
 <template>
   <main class="main">
-    <UnderConstruction v-if="isComplete" />
-    <Nuxt />
+    <Navigation />
+    <UnderConstruction v-if="notComplete" />
+    <Nuxt v-if="!notComplete" />
+    <Footer />
   </main>
 </template>
 
@@ -9,11 +11,11 @@
 export default {
   data() {
     return {
-      isComplete: false,
+      notComplete: true,
     }
   },
   async fetch() {
-    this.isComplete = await this.$content('under-construction').fetch()
+    this.notComplete = await this.$content('under-construction').fetch()
   },
 }
 </script>
