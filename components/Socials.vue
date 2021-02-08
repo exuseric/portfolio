@@ -17,7 +17,7 @@
       <Twitter />
     </a>
     <a
-      href="https://www.linkedin.com/exuseric"
+      href="https://www.linkedin.com/in/eric-g-48691b165"
       target="_blank"
       rel="noopener noreferrer"
       class="link"
@@ -28,9 +28,9 @@
 </template>
 
 <script>
-import Github from '~/static/icons/github.svg?inline'
-import Twitter from '~/static/icons/twitter.svg?inline'
-import LinkedIn from '~/static/icons/linkedin.svg?inline'
+import Github from '~/static/images/icons/github.svg?inline'
+import Twitter from '~/static/images/icons/twitter.svg?inline'
+import LinkedIn from '~/static/images/icons/linkedin.svg?inline'
 export default {
   components: {
     Github,
@@ -65,7 +65,7 @@ export default {
 
   &:hover,
   &:focus {
-    color: theme('text-secondary');
+    color: theme('highlight');
   }
   svg {
     width: 1.25rem; //20px
