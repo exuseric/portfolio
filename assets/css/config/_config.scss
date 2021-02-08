@@ -5,10 +5,11 @@
 
 // COLORS
 $primary: #ffdc00;
+$primary-dark: #c1a600;
 $secondary: #00a3ff;
 $highlight: #44bcff;
 $white: #ffffff;
-$gray: #505050;
+$gray: #969696;
 $dark-gray: #161616;
 $black: #020202;
 $gradient: linear-gradient(135deg, #00a3ff, #5c00ff);
@@ -18,7 +19,7 @@ $paragraph: 'Cabin', sans-serif;
 $heading: 'Playfair Display', serif;
 
 // Type Scale
-$font-base: 16px;
+$base: 16; //16px
 $font-xs: 0.8125rem; // 13px
 $font-sm: 1rem; // 16px
 $font-md: 1.5rem; // 24px
@@ -26,24 +27,38 @@ $font-lg: 3.75rem; // 60px
 $font-xl: 4.6rem; // 75px
 $font-2xl: 7.5rem; // 120px
 
+@include screen-lg {
+
+}
+
+
 // Spacing Scale
 $space-xs: 0.625rem; // 10px
 $space-sm: 0.9375rem; // 15px
 $space-md: 1.25rem; // 20px
 $space-lg: 5rem; // 80px
+$space-xl: 10rem; // 160px
+
+// Content spacing
+$content-spacing-lg-x: 200px;
+$content-spacing-lg-y: 200px;
+$content-spacing-sm-x: 20px;
+$content-spacing-sm-y: 70px;
+$content-itm-spacing-lg: 140px 0;
+$content-itm-spacing-sm: 100px 0;
 
 // Scale
 $nav-scale-sm: 5rem; // 80px
 $nav-scale-lg: 7.5rem; // 120px
 
 $theme: (
-  'main-bg': $black,
-  'main-text': $white,
+  'main-bg': $white,
+  'main-text': $dark-gray,
   'light-bg': $white,
   'dark-bg': $dark-gray,
-  'pop-bg': $primary,
-  'text-primary': $primary,
-  'text-secondary': $secondary,
+  'lemon': $primary,
+  'dark-lemon': $primary-dark,
+  'highlight': $secondary,
   'text-dark': $dark-gray,
   'text-light': $white,
   'text-mid': $gray,

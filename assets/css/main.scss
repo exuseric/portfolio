@@ -1,7 +1,7 @@
 @import './config/config';
 
 body, html {
-  font-size: $font-base;
+  font-size: $base + px;
   font-family: $paragraph;
   font-weight: 400;
 }
@@ -20,12 +20,31 @@ body, html {
   max-width: 100rem;
 
   margin: auto;
-  padding: $space-lg 0;
+  padding: 0 $space-md;
+}
+
+.content {
+  margin: $content-spacing-lg-y 0;
+  padding-bottom: $content-spacing-lg-y;
+  height: 100%;
+
+  & > * + * {
+    padding: $content-itm-spacing-sm;
+  }
+
+  // @include screen-lg {
+  //   padding: $content-spacing-lg-y $content-spacing-lg-x;
+
+  //   & > * + * {
+  //     padding: $content-itm-spacing-lg;
+  //   }
+  // }
 }
 
 .heading {
   font-family: $heading;
   line-height: 1.125;
+  letter-spacing: -2px;
 }
 
 .text-xs {
@@ -54,10 +73,16 @@ body, html {
 }
 
 .primary {
-  color: theme('text-primary');
+  color: theme('lemon');
+}
+
+.primary-dark {
+  color: theme('dark-lemon');
 }
 
 .link {
+  position: relative;
+
   text-decoration: none;
   text-transform: capitalize;
 
@@ -70,6 +95,24 @@ body, html {
 
   &:hover {
     color: $highlight;
+  }
+
+  &.nuxt-link-exact-active {
+    color: theme('highlight');
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 1.25rem;
+
+      width: 100%;
+      height: (3 / $base) + rem;
+
+      color: inherit;
+      background-color: currentColor;
+
+      border-radius: 30px;
+    }
   }
 }
 

@@ -21,6 +21,14 @@
   }
 };
 
+@mixin grid($column, $row, $gap) {
+  display: grid;
+  grid-template-columns: $column;
+  grid-template-rows: $row;
+  gap: $gap;
+  align-items: center;
+};
+
 @mixin grid-cols-2($column) {
   display: grid;
   grid-template-columns: repeat(2, $column);

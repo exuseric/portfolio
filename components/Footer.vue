@@ -2,7 +2,7 @@
   <footer class="footer">
     <div class="wrapper">
       <Socials />
-      <div class="content">
+      <div class="footer-content">
         <a href="mailto:ericmaina.gathoni@gmail.com" class="link">
           ericmaina.gathoni@gmail.com
         </a>
@@ -33,7 +33,7 @@
   color: theme('text-mid');
 }
 
-.content {
+.footer-content {
   padding: $space-md 0;
   p {
     padding: $space-sm 0;

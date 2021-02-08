@@ -13,9 +13,6 @@
             {{ link.name }}
           </nuxt-link>
         </li>
-        <nuxt-link to="/work" class="link gradient-btn link-btn"
-          >work</nuxt-link
-        >
       </ul>
     </nav>
   </header>
@@ -27,6 +24,7 @@ export default {
     return {
       isOpen: false,
       links: [
+        { name: 'work', route: '/' },
         { name: 'about', route: '/about' },
         { name: 'contact', route: '/contact' },
       ],
@@ -99,7 +97,7 @@ export default {
 .menu-btn {
   @include center;
 
-  color: theme('pop-bg');
+  color: theme('lemon');
   background-color: transparent;
 }
 
