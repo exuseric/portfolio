@@ -86,7 +86,7 @@ export default {
       {
         rel: 'stylesheet',
         href:
-          'https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&family=Rock+Salt&display=swap"',
+          'https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display&display=swap"',
       },
     ],
   },
