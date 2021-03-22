@@ -1,0 +1,18 @@
+{
+  "id": 0,
+  "title": "Cuppa",
+  "tagline": "Tea for your weather.",
+  "description": "Cuppa is a weather web application that gives you tea recipes alongside your current weather conditions.",
+  "cover": "logo.png",
+  "stack": [
+    {
+      "url": "https://vuejs.org",
+      "title": "Vue.js"
+    },
+    {
+      "url": "https://openweathermap.org",
+      "title": "OpenWeatherMap"
+    }
+  ],
+  "repo": { "url": "https://github.com/exuseric/cuppa", "title": "grab the code." }
+}

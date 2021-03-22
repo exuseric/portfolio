@@ -1,0 +1,14 @@
+{
+  "id": 1,
+  "title": "Thekat",
+  "tagline": "Plan. Track. Share.",
+  "description": "Thekat is a web application that lets you — organize, plan, track and share — your tasks or ideas.",
+  "cover": "logo.png",
+  "stack": [
+    {
+      "url": "https://reactjs.org",
+      "title": "React.js"
+    }
+  ],
+  "repo": { "url": "https://github.com/exuseric/thekat", "title": "Peek at the code." }
+}
