@@ -4,18 +4,19 @@
 @import './functions';
 
 // COLORS
-$primary: #ffdc00;
-$primary-dark: #c1a600;
-$secondary: #00a3ff;
+// $primary: #320d73;
+$primary: #005180;
+$secondary: #8e4dff;
+// $secondary: #00a3ff;
 $highlight: #44bcff;
 $white: #ffffff;
 $gray: #969696;
 $dark-gray: #161616;
 $black: #020202;
-$gradient: linear-gradient(135deg, #00a3ff, #5c00ff);
+$gradient: linear-gradient(135deg, #00a3ff, #005280);
 
 // Types
-$paragraph: 'Cabin', sans-serif;
+$paragraph: 'Montserrat', sans-serif;
 $heading: 'Playfair Display', serif;
 
 // Type Scale
@@ -27,10 +28,6 @@ $font-lg: 3.75rem; // 60px
 $font-xl: 4.6rem; // 75px
 $font-2xl: 7.5rem; // 120px
 
-@include screen-lg {
-
-}
-
 
 // Spacing Scale
 $space-xs: 0.625rem; // 10px
@@ -40,10 +37,9 @@ $space-lg: 5rem; // 80px
 $space-xl: 10rem; // 160px
 
 // Content spacing
-$content-spacing-lg-x: 200px;
-$content-spacing-lg-y: 200px;
-$content-spacing-sm-x: 20px;
-$content-spacing-sm-y: 70px;
+$content-spacing-lg: 200px;
+$content-spacing-md: 70px;
+$content-spacing-sm: 20px;
 $content-itm-spacing-lg: 140px 0;
 $content-itm-spacing-sm: 100px 0;
 
@@ -56,9 +52,9 @@ $theme: (
   'main-text': $dark-gray,
   'light-bg': $white,
   'dark-bg': $dark-gray,
-  'lemon': $primary,
-  'dark-lemon': $primary-dark,
-  'highlight': $secondary,
+  'punch': $primary,
+  'candy': $secondary,
+  'accent': $highlight,
   'text-dark': $dark-gray,
   'text-light': $white,
   'text-mid': $gray,

@@ -13,10 +13,6 @@
 
 @mixin screen-lg {
   @media screen and (min-width: #{$screen-lg}) {
-    .wrapper,
-    .nav-container {
-
-    }
     @content
   }
 };

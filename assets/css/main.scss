@@ -24,8 +24,8 @@ body, html {
 }
 
 .content {
-  margin: $content-spacing-lg-y 0;
-  padding-bottom: $content-spacing-lg-y;
+  margin: $content-spacing-lg 0;
+  padding-bottom: $content-spacing-lg;
   height: 100%;
 
   & > * + * {
@@ -73,11 +73,7 @@ body, html {
 }
 
 .primary {
-  color: theme('lemon');
-}
-
-.primary-dark {
-  color: theme('dark-lemon');
+  color: theme('punch');
 }
 
 .link {
@@ -94,11 +90,11 @@ body, html {
   transition: color 0.35s ease-out;
 
   &:hover {
-    color: $highlight;
+    color: theme('accent');
   }
 
   &.nuxt-link-exact-active {
-    color: theme('highlight');
+    color: theme('accent');
 
     &::before {
       content: '';
