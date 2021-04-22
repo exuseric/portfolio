@@ -3,7 +3,7 @@
     <nav class="nav nav-wrapper">
       <!-- Logo -->
       <div class="logo">
-        <Logo />
+        <Logo logo="logo" />
       </div>
 
       <!-- Menu -->
@@ -35,7 +35,7 @@ export default {
 
 <style lang="scss" scoped>
 .navigation {
-  position: relative;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
@@ -46,12 +46,12 @@ export default {
   height: $nav-scale-sm;
   padding: 0 $space-md;
 
-  background-color: theme('main-bg');
+  background: theme('candy');
 
   .logo {
-    width: $nav-scale-sm / 1.75;
+    width: $nav-scale-sm / 2.85;
 
-    @include screen-lg {
+    @include sm-screen {
       width: $nav-scale-lg / 1.75;
     }
   }
@@ -70,8 +70,53 @@ export default {
     @include flex(row, space-between);
     gap: $space-md;
   }
-  @include screen-lg {
-    height: $nav-scale-lg;
+}
+
+.link {
+  position: relative;
+  z-index: 2;
+
+  font-size: $font-sm;
+  text-decoration: none;
+  text-transform: capitalize;
+
+  color: theme('text-dark');
+
+  margin: auto;
+  padding: $space-xs - 0.25;
+
+  animation: 1s appear;
+  transition: all 0.35s ease-out;
+
+  &:hover {
+    color: theme('accent');
+  }
+
+  &.nuxt-link-exact-active {
+    color: theme('accent');
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      z-index: -1;
+
+      transform: translate(-50%, -50%) scale(1);
+
+      width: 100%;
+      height: 0.25rem;
+
+      color: inherit;
+      background-color: currentColor;
+
+      border-radius: 10px;
+
+      box-shadow: $tight-shadow;
+
+      animation: ping 0.8s ease-in-out infinite both;
+      // animation: appear 3s linear infinite;
+    }
   }
 }
 
@@ -79,29 +124,5 @@ export default {
   @include center;
 
   padding: $space-xs $space-md;
-}
-
-.icon__hide {
-  opacity: 0;
-  pointer-events: none;
-}
-.icon__show {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.mobile-menu {
-  background-color: inherit;
-}
-
-.menu-btn {
-  @include center;
-
-  color: theme('lemon');
-  background-color: transparent;
-}
-
-.icon {
-  color: inherit;
 }
 </style>

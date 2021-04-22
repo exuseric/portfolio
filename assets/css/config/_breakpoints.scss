@@ -1,15 +1,10 @@
-/* Small (640px) */
-$screen-sm: 40em;
+$mobile-min: 320px;
+$mobile-max: 480px;
 
-/* Medium (768px) */
-$screen-md: 48em;
+$tablet-max: 768px;
 
-/* Large (1024px) */
-$screen-lg: 64em;
+$sm-max: 1024px;
 
-/* Extra Large (1280px) */
-$screen-xl: 80em;
+$lg-max: 1200px;
 
-/* Two Extra Large (1536px) */
-$screen-xxl: 96em;
 

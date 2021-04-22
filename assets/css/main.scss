@@ -4,46 +4,48 @@ body, html {
   font-size: $base + px;
   font-family: $paragraph;
   font-weight: 400;
+
+  color: theme('text-light');
 }
 
 .main {
   color: theme('main-text');
-  background-color: theme('main-bg');
+
+  background-image: radial-gradient(transparentize($color: theme('text-mid'), $amount: 0.1) 1px, theme('main-bg') 1px);
+  background-size: 20px 20px;
 
   width: 100%;
   height: 100%;
   min-height: 100vh;
+
+  &__content {
+    width: 100%;
+    max-width: 100rem;
+
+    margin: auto;
+    padding: 0 $space-md;
+  }
 }
 
-.wrapper {
-  width: 100%;
-  max-width: 100rem;
-
-  margin: auto;
-  padding: 0 $space-md;
-}
 
 .content {
-  margin: $content-spacing-lg 0;
-  padding-bottom: $content-spacing-lg;
+  padding: $content-spacing-lg 0;
   height: 100%;
 
   & > * + * {
-    padding: $content-itm-spacing-sm;
+    padding: $content-itm-spacing-sm 0;
   }
 
-  // @include screen-lg {
-  //   padding: $content-spacing-lg-y $content-spacing-lg-x;
-
-  //   & > * + * {
-  //     padding: $content-itm-spacing-lg;
-  //   }
-  // }
 }
 
 .heading {
   font-family: $heading;
   line-height: 1.125;
+  letter-spacing: -2px;
+}
+.display {
+  font-family: $display;
+  line-height: 0.85;
   letter-spacing: -2px;
 }
 
@@ -73,43 +75,7 @@ body, html {
 }
 
 .primary {
-  color: theme('punch');
-}
-
-.link {
-  position: relative;
-
-  text-decoration: none;
-  text-transform: capitalize;
-
-  color: theme('main-text');
-
-  margin: auto;
-
-  animation: 1s appear;
-  transition: color 0.35s ease-out;
-
-  &:hover {
-    color: theme('accent');
-  }
-
-  &.nuxt-link-exact-active {
-    color: theme('accent');
-
-    &::before {
-      content: '';
-      position: absolute;
-      top: 1.25rem;
-
-      width: 100%;
-      height: (3 / $base) + rem;
-
-      color: inherit;
-      background-color: currentColor;
-
-      border-radius: 30px;
-    }
-  }
+  color: theme('kobi');
 }
 
 button {
@@ -119,15 +85,14 @@ button {
 }
 
 .gradient-btn {
-  color: theme('text-light');
-  background: $gradient;
-  background-size: 100%;
-  background-repeat: repeat;
 
-  border: 2px solid transparent;
-  outline: none;
+  color: theme('text-mid');
+  background: theme('night');
+
+  border: 2px solid currentColor;
 
   &:hover {
-    border-color: currentColor;
+    color: theme('text-light');
+    background: theme('sky');
   }
 }

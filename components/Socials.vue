@@ -5,6 +5,7 @@
       target="_blank"
       rel="noopener noreferrer"
       class="link"
+      aria-label="Github"
     >
       <Github />
     </a>
@@ -13,6 +14,7 @@
       target="_blank"
       rel="noopener noreferrer"
       class="link"
+      aria-label="Twitter"
     >
       <Twitter />
     </a>
@@ -21,6 +23,7 @@
       target="_blank"
       rel="noopener noreferrer"
       class="link"
+      aria-label="Linkedin"
     >
       <LinkedIn />
     </a>
@@ -52,20 +55,24 @@ export default {
   @include flex(row, space-between);
 }
 .link {
+  position: relative;
+  z-index: 1;
+
   @include center;
 
   width: 3rem; //48px
   height: 3rem; //48px
 
+  color: theme('text-mid');
+  background: theme('night');
+
   border: 2px solid currentColor;
   border-radius: 50%;
 
-  color: theme('text-mid');
-  background-color: theme('main-bg');
-
   &:hover,
   &:focus {
-    color: theme('highlight');
+    color: theme('text-light');
+    background: theme('sky');
   }
   svg {
     width: 1.25rem; //20px

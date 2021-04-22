@@ -4,26 +4,36 @@
 @import './functions';
 
 // COLORS
-// $primary: #320d73;
-$primary: #005180;
-$secondary: #8e4dff;
-// $secondary: #00a3ff;
-$highlight: #44bcff;
+$primary: #d499b9;
+$secondary: #9fffcb;
+$highlight: #3f88c5;
 $white: #ffffff;
-$gray: #969696;
-$dark-gray: #161616;
+$gray: #40394a;
+$dark-gray: #22181c;
 $black: #020202;
-$gradient: linear-gradient(135deg, #00a3ff, #005280);
+$dark-gradient: linear-gradient(135deg, $dark-gray, $black);
+$pop-gradient: linear-gradient(135deg, $secondary, $highlight);
+
+// Shadows
+$tight-shadow:
+  0 1.7px 3.3px rgba(0, 0, 0, 0.02),
+  0 5.6px 11.2px rgba(0, 0, 0, 0.03),
+  0 25px 50px rgba(0, 0, 0, 0.05)
+;
+
+
+$light-border: 2px solid lighten($color: $dark-gray, $amount: 5);
 
 // Types
-$paragraph: 'Montserrat', sans-serif;
-$heading: 'Playfair Display', serif;
+$paragraph: 'Andika New Basic', serif;
+$heading: 'Playfair Display', sans-serif;
+$display: 'Henny Penny', sans-serif;
 
 // Type Scale
 $base: 16; //16px
 $font-xs: 0.8125rem; // 13px
 $font-sm: 1rem; // 16px
-$font-md: 1.5rem; // 24px
+$font-md: 1.25rem; // 20px
 $font-lg: 3.75rem; // 60px
 $font-xl: 4.6rem; // 75px
 $font-2xl: 7.5rem; // 120px
@@ -48,15 +58,16 @@ $nav-scale-sm: 5rem; // 80px
 $nav-scale-lg: 7.5rem; // 120px
 
 $theme: (
-  'main-bg': $white,
-  'main-text': $dark-gray,
+  'main-bg': $black,
+  'main-text': $white,
   'light-bg': $white,
   'dark-bg': $dark-gray,
-  'punch': $primary,
+  'kobi': $primary,
   'candy': $secondary,
   'accent': $highlight,
   'text-dark': $dark-gray,
   'text-light': $white,
   'text-mid': $gray,
-
+  'night': $dark-gradient,
+  'sky': $pop-gradient
 );

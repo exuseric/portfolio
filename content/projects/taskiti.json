@@ -1,0 +1,17 @@
+{
+  "id": 1,
+  "title": "Taskiti",
+  "tagline": "Plan. Track. Share.",
+  "description": "Taskiti is a web application that lets you — organize, plan, track and share — your tasks or ideas.",
+  "cover": "logo.png",
+  "stack": [
+    {
+      "url": "https://reactjs.org",
+      "title": "React.js"
+    }
+  ],
+  "repo": { "url": "https://github.com/exuseric/thekat", "title": "Peek at the code." },
+  "url": "https://taskiti.netlify.app/",
+  "textColor": "#212121",
+  "overlayColor": "#FD2345"
+}

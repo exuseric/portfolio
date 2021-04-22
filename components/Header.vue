@@ -2,13 +2,19 @@
   <header class="header">
     <div class="top">
       <span class="info">
-        <h1 class="heading">Eric Maina</h1>
+        <h1 class="display">Eric Maina</h1>
         <p class="subtitle">Front-end Developer</p>
       </span>
     </div>
     <div class="bottom">
-      <img :src="`/images/illustrations/${image}`" alt="robot" />
-      <h2 class="heading">
+      <div class="image-wrapper">
+        <img
+          :src="`/images/illustrations/${image}`"
+          alt="robot"
+          class="image"
+        />
+      </div>
+      <h2 class="heading current-page">
         {{ page }}
       </h2>
     </div>
@@ -34,93 +40,79 @@ export default {
 
 <style lang="scss" scoped>
 .header {
-  @include grid(
-    $column: repeat(6, 1fr),
-    $row: repeat(6, ((50 / $base) + rem)),
-    $gap: $space-xs
-  );
+  @include grid-r-2(50%);
 
+  width: 100%;
+  height: 31.25rem; //500px
   text-align: center;
-
-  max-width: 100rem;
-  height: auto;
-
-  margin: auto;
-
-  .top {
-    grid-column: 1 / -1;
-    grid-row: 1 / 6;
-
-    width: 100%;
-    height: 100%;
-
-    padding: $space-md;
-    background-color: theme('lemon');
-
-    border-radius: 1rem;
-
-    @include screen-lg {
-      padding: $space-lg;
-      border-rdaius: 2rem;
-    }
-  }
-
-  .bottom {
-    grid-column: 2 / -2;
-    grid-row: 3 / -1;
-
-    width: 100%;
-    height: 100%;
-    padding: $space-md 0;
-
-    z-index: 2;
-
-    @include screen-lg {
-      grid-column: 3 / -3;
-    }
-  }
-
-  @include screen-lg {
-    @include grid(
-      $column: repeat(6, 1fr),
-      $row: repeat(6, ((100 / $base) + rem)),
-      $gap: $space-xs
-    );
-    height: (800 / $base) + rem;
-  }
 }
 
-.content {
+.top,
+.bottom {
+  width: 100%;
+  height: 100%;
+}
+
+.top {
+  grid-row: 1 / 2;
   @include center;
+
+  text-align: center;
+  padding: $space-md 0;
+
+  .display {
+    font-size: $font-lg;
+    text-transform: lowercase;
+    // text-shadow: $tight-shadow;
+    text-shadow: 0 1px 0 theme('text-mid'), 0 2px 0 theme('text-mid'),
+      0 3px 0 theme('text-mid'), 0 4px 0 theme('text-mid'),
+      0 5px 0 theme('text-mid'), 0 6px 0 theme('text-mid'),
+      0 7px 0 theme('text-mid'), 0 8px 0 theme('text-mid'),
+      0 9px 0 theme('text-mid');
+
+    color: theme('kobi');
+  }
+  .subtitle {
+    font-size: $font-md;
+    color: theme('kobi');
+  }
 }
 
 .bottom {
-  text-align: center;
+  grid-row: 2 / -1;
+  @include grid-6;
 
-  .heading {
-    color: theme('highlight');
-    font-size: $font-md;
-    padding: $space-md 0;
-  }
-}
-.info {
-  width: 100%;
-  height: 100%;
+  .image-wrapper {
+    grid-column: 1 / -1;
+    grid-row: 1 /-1;
 
-  text-align: center;
-  background: plum;
+    filter: grayscale(70%) opacity(0.75);
 
-  .heading {
-    color: theme('text-light');
-    font-size: $font-lg;
+    .image {
+      width: 60%;
+      height: auto;
 
-    @include screen-lg {
-      font-size: $font-2xl;
+      margin: auto;
+
+      object-position: center;
     }
   }
-  .subtitle {
-    color: theme('text-dark');
-    font-size: $font-md;
+
+  .current-page {
+    z-index: 1;
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    flex-wrap: wrap;
+
+    font-size: $font-xl;
+    text-transform: capitalize;
+
+    color: theme('candy');
+
+    text-shadow: 0 1px 0 theme('accent'), 0 2px 0 theme('accent'),
+      0 3px 0 theme('accent'), 0 4px 0 theme('accent'), 0 5px 0 theme('accent'),
+      0 6px 0 theme('accent'), 0 7px 0 theme('accent'), 0 8px 0 theme('accent'),
+      0 9px 0 theme('accent');
   }
 }
 </style>

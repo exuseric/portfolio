@@ -1,7 +1,7 @@
 {
   "id": 0,
   "title": "Cuppa",
-  "tagline": "Tea for your weather.",
+  "tagline": "Tea & Weather.",
   "description": "Cuppa is a weather web application that gives you tea recipes alongside your current weather conditions.",
   "cover": "logo.png",
   "stack": [
@@ -14,5 +14,8 @@
       "title": "OpenWeatherMap"
     }
   ],
-  "repo": { "url": "https://github.com/exuseric/cuppa", "title": "grab the code." }
+  "repo": { "url": "https://github.com/exuseric/cuppa", "title": "grab the code." },
+  "url": "https://cuppa.netlify.app/",
+  "textColor": "white",
+  "overlayColor": "#FA9B1C"
 }

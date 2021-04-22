@@ -8,7 +8,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { name: 'theme-color', content: '#ffdc00' },
+      { name: 'theme-color', content: '#d499b9' },
       {
         hid: 'description',
         name: 'description',
@@ -86,7 +86,7 @@ export default {
       {
         rel: 'stylesheet',
         href:
-          'https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display&display=swap"',
+          'https://fonts.googleapis.com/css2?family=Andika+New+Basic&family=Playfair+Display&family=Henny+Penny&display=swap"',
       },
     ],
   },
@@ -95,7 +95,7 @@ export default {
   css: ['~/assets/css/main.scss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: ['~/plugins/aos.client'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -128,10 +128,11 @@ export default {
       short_name: 'EMG',
       name: 'Eric Maina • Front-end Developer',
       description: 'Eric Maina, a front-end developer from Nairobi, Kenya.',
-      backgorund_color: '#020202',
-      theme_color: '#ffdc00',
+      backgorund_color: '#ffffff',
+      theme_color: '#d499b9',
       start_url: '/',
       display: 'standalone',
+      iconSrc: '/icon.png',
     },
   },
 
